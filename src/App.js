@@ -1,4 +1,5 @@
 import React from "react";
+import MeditationsContainer from "./containers/meditationsContainer";
 
 class App extends React.Component {
   // componentDidMount() {
@@ -7,11 +8,7 @@ class App extends React.Component {
   //     .then(data => console.log(data));
   // }
   render() {
-    return (
-      <div>
-        <h3>Dharma Bums Client</h3>
-      </div>
-    );
+    return <MeditationsContainer />;
   }
 }
 
