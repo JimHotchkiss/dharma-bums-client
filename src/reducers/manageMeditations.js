@@ -1,17 +1,27 @@
-export default function manageMeditations(
+const manageMeditations = (
   state = {
-    meditations: []
+    meditations: [],
+    loading: false
   },
   action
-) {
+) => {
   switch (action.type) {
-    case "ADD_MEDITATION":
+    case "LOADING_MEDITATIONS":
       return {
         ...state,
-        meditations: [...state.meditations, action.meditation]
+        meditations: [...state.meditations],
+        loading: true
+      };
+    case "ADD_MEDITATIONS":
+      return {
+        ...state,
+        meditations: action.meditations.data,
+        loading: false
       };
 
     default:
       return state;
   }
-}
+};
+
+export default manageMeditations;
