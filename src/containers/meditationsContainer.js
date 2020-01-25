@@ -4,21 +4,27 @@ import { connect } from "react-redux";
 import { fetchMeditations } from "../actions/fetchMeditations";
 
 class MeditationsContainer extends React.Component {
-  handleOnClick = () => {
+  // handleOnClick = () => {
+  //   this.props.fetchMeditations();
+  // };
+
+  componentDidMount() {
     this.props.fetchMeditations();
-  };
+  }
   render() {
-    console.log(this.props.meditations);
     const meditationList = this.props.meditations.map(meditation => (
       <li key={meditation.id}>
-        {meditation.attributes.theme} {meditation.attributes.duration}
+        <a href="#">
+          {meditation.attributes.theme} {meditation.attributes.duration}
+        </a>
       </li>
     ));
     return (
-      <div className="Meditation_background">
-        <button onClick={this.handleOnClick}>Meditations</button>
-        {meditationList}
-      </div>
+      // // <div className="Meditation_background">
+      // //   <button onClick={this.handleOnClick}>Meditations</button>
+
+      // </div>
+      <div className="Meditation_background">{meditationList}</div>
     );
   }
 }
