@@ -10,16 +10,17 @@ class MeditationsContainer extends React.Component {
     this.props.fetchMeditations();
   }
   render() {
-    const meditationList = this.props.meditations.map(meditation => (
-      <li key={meditation.id}>
-        <a href="#">
-          {meditation.attributes.theme} {meditation.attributes.duration}
-        </a>
-      </li>
-    ));
     return (
       <div className="Meditation_background">
-        <Route path="/meditations" component={Meditations} />
+        <Route
+          path="/meditations"
+          render={routerProps => (
+            <Meditations
+              {...routerProps}
+              meditations={this.props.meditations}
+            />
+          )}
+        />
       </div>
     );
   }
