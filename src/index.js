@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import manageMeditations from "./reducers/manageMeditations";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // 2. Include thunk in createStore()
 const store = createStore(
@@ -18,7 +19,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById("root")
 );
