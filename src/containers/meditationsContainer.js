@@ -3,7 +3,8 @@ import "./Meditation.css";
 import { connect } from "react-redux";
 import { fetchMeditations } from "../actions/fetchMeditations";
 import Meditations from "../components/Meditations";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Meditation from "../components/Meditation";
 
 class MeditationsContainer extends React.Component {
   componentDidMount() {
@@ -19,6 +20,12 @@ class MeditationsContainer extends React.Component {
               {...routerProps}
               meditations={this.props.meditations}
             />
+          )}
+        />
+        <Route
+          path="/meditations/:id"
+          render={routerProps => (
+            <Meditation {...routerProps} meditations={this.props.meditations} />
           )}
         />
       </div>
