@@ -13,21 +13,27 @@ class MeditationsContainer extends React.Component {
   render() {
     return (
       <div className="Meditation_background">
-        <Route
-          path="/meditations"
-          render={routerProps => (
-            <Meditations
-              {...routerProps}
-              meditations={this.props.meditations}
-            />
-          )}
-        />
-        <Route
-          path="/meditations/:id"
-          render={routerProps => (
-            <Meditation {...routerProps} meditations={this.props.meditations} />
-          )}
-        />
+        <Switch>
+          <Route
+            exact
+            path="/meditations"
+            render={routerProps => (
+              <Meditations
+                {...routerProps}
+                meditations={this.props.meditations}
+              />
+            )}
+          />
+          <Route
+            path="/meditations/:id"
+            render={routerProps => (
+              <Meditation
+                {...routerProps}
+                meditations={this.props.meditations}
+              />
+            )}
+          />
+        </Switch>
       </div>
     );
   }

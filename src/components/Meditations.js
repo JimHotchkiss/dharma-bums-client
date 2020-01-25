@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Meditations = props => {
   const meditationList = props.meditations.map(meditation => (
-    <li key={meditation.id}>
-      <a href="#">
-        {meditation.attributes.theme} {meditation.attributes.duration}
-      </a>
-    </li>
+    <div key={meditation.id}>
+      <li>
+        <Link to={`/meditations/${meditation.id}`}>
+          {meditation.attributes.theme} {meditation.attributes.duration}
+        </Link>
+      </li>
+    </div>
   ));
   return (
     <div>
