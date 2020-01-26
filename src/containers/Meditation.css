@@ -10,7 +10,7 @@ html {
 }
 
 .Container {
-  background-color: #ccc;
+  background-color: #f0eeee;
   height: 100vh;
   width: 100%;
   padding: 0.5em;
@@ -27,12 +27,46 @@ html {
   width: 150px;
   margin: 0.5em;
   padding: 1em;
+  text-align: center;
 }
 
-/* .Card {
-  padding: 2em;
-  margin: 1em;
-  height: 200px;
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-  width: 200px;
-} */
+.Finished {
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  height: 250px;
+  width: 150px;
+  margin: 0.5em;
+  padding: 1em;
+  text-align: center;
+}
+
+.Finished-message {
+  margin-top: 0.5em;
+  color: #ff4d4d;
+}
+
+.Theme-element {
+  color: #282222;
+  line-height: 1.25em;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.link:hover {
+  color: #a39393;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.organizer-div {
+  padding-top: 0.25em;
+  margin: 0.5em;
+  color: #282222;
+}
+
+.duration-div {
+  color: #282222;
+}

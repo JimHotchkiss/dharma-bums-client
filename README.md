@@ -68,13 +68,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ### Meditations code:
-
-<div key={meditation.id} className="Meditations-item">
-      <li>
-        <h2 className="Organizer-name">
-          <Link to={`/meditations/${meditation.id}`}>
-            {meditation.attributes.theme} {meditation.attributes.duration}
-          </Link>
-        </h2>
-      </li>
-    </div>
