@@ -3,22 +3,15 @@ import { Link } from "react-router-dom";
 
 const Meditations = props => {
   const meditationList = props.meditations.map(meditation => (
-    <div key={meditation.id} className="container">
-      <div className="Card-main">
-        <li>
-          <h2 className="Organizer-name">
-            <Link to={`/meditations/${meditation.id}`}>
-              {meditation.attributes.theme} {meditation.attributes.duration}
-            </Link>
-          </h2>
-        </li>
-      </div>
+    <div className="Card-element">
+      <li>
+        <Link to={`/meditations/${meditation.id}`}>
+          {meditation.attributes.theme}
+        </Link>
+        {meditation.attributes.duration}
+      </li>
     </div>
   ));
-  return (
-    <div>
-      <h3>{meditationList}</h3>
-    </div>
-  );
+  return <div className="Container">{meditationList}</div>;
 };
 export default Meditations;

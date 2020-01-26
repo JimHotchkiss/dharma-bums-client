@@ -69,8 +69,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Meditations code:
 
-{/_ <li>
-<Link to={`/meditations/${meditation.id}`}>
-{meditation.attributes.theme} {meditation.attributes.duration}
-</Link>
-</li> _/}
+<div key={meditation.id} className="Meditations-item">
+      <li>
+        <h2 className="Organizer-name">
+          <Link to={`/meditations/${meditation.id}`}>
+            {meditation.attributes.theme} {meditation.attributes.duration}
+          </Link>
+        </h2>
+      </li>
+    </div>
