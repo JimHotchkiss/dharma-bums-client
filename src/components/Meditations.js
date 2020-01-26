@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Meditations = props => {
   const meditationList = props.meditations.map(meditation => (
-    <div key={meditation.id} className="Card">
+    <div key={meditation.id} className="container">
       <div className="Card-main">
         <li>
           <h2 className="Organizer-name">
