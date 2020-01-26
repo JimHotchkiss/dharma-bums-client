@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Meditations code:
+
+{/_ <li>
+<Link to={`/meditations/${meditation.id}`}>
+{meditation.attributes.theme} {meditation.attributes.duration}
+</Link>
+</li> _/}
