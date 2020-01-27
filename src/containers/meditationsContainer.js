@@ -11,7 +11,6 @@ class MeditationsContainer extends React.Component {
     this.props.fetchMeditations();
   }
   render() {
-    console.log(this.props);
     return (
       <div className="Meditation_background">
         <Switch>
