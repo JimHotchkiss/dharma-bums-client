@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import { fetchMeditations } from "../actions/fetchMeditations";
 import Meditations from "../components/Meditations";
 import { Route, Switch } from "react-router-dom";
+import NavBar from "../components/NavBar";
 import Meditation from "../components/Meditation";
 import MeditationForm from "../components/MeditationForm";
-import NavBar from "../components/NavBar";
 
 class MeditationsContainer extends React.Component {
   componentDidMount() {

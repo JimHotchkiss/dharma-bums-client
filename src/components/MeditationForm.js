@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 class MeditationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { theme: "", duration: "5 minutes", organizer: "" };
+    this.state = { theme: "", duration: "20", organizer: "" };
   }
 
   handleTheme = event => {
@@ -20,8 +21,13 @@ class MeditationForm extends React.Component {
   };
 
   handleSubmit = event => {
-    console.log("this is in handleSubmit", this.state.value);
     event.preventDefault();
+    this.props.addMeditation(this.state);
+    this.setState({
+      theme: "",
+      organizer: "",
+      duration: "20"
+    });
   };
 
   render() {
@@ -36,6 +42,7 @@ class MeditationForm extends React.Component {
             Theme:
             <input
               type="text"
+              placeholder="Theme"
               value={this.state.theme}
               onChange={this.handleTheme}
             />
@@ -43,16 +50,26 @@ class MeditationForm extends React.Component {
           <label>
             Duration:
             <select value={this.state.duration} onChange={this.handleDuration}>
-              <option value="5 minutes">5</option>
-              <option value="10 minutes">10</option>
-              <option value="15 minutes">15</option>
-              <option value="20 minutes">20</option>
+              <option value="2">2</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+              <option value="60">60</option>
             </select>
           </label>
           <label>
             Organizer:
             <input
               type="text"
+              placeholder="Organizer"
               value={this.state.organizer}
               onChange={this.handleOrganizer}
             />
@@ -66,4 +83,11 @@ class MeditationForm extends React.Component {
     );
   }
 }
-export default MeditationForm;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addMeditation: formData =>
+      dispatch({ type: "ADD_MEDITATION", payload: formData })
+  };
+};
+export default connect(null, mapDispatchToProps)(MeditationForm);

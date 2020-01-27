@@ -6,7 +6,7 @@ const Meditation = props => {
 
   return (
     <div>
-      {meditation ? console.log(props.duration) : null}
+      {meditation ? meditation.attributes.duration : null}
       <h3>{meditation ? meditation.attributes.theme : null}</h3>
       <div>
         <Link to={`/meditations`}>Back to Meditations</Link>

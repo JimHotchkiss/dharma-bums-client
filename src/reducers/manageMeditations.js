@@ -14,10 +14,17 @@ const manageMeditations = (
         meditations: [...state.meditations],
         loading: true
       };
-    case "ADD_MEDITATIONS":
+    case "FETCH_MEDITATIONS":
       return {
         ...state,
         meditations: action.meditations.data,
+        loading: false
+      };
+    case "ADD_MEDITATION":
+      console.log(action.payload, state);
+      return {
+        ...state,
+        meditations: [...state.meditations, action.payload],
         loading: false
       };
 
