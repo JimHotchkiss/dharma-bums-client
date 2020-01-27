@@ -11,7 +11,8 @@ html {
 
 .Container {
   background-color: #f0eeee;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 0.5em;
   display: flex;
@@ -23,18 +24,20 @@ html {
 
 .Card-element {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0px 8px 6px -6px black;
   height: 250px;
   width: 150px;
-  margin: 0.5em;
+  margin: 0.5em 1em;
   padding: 1em;
   text-align: center;
 }
 
 .Finished {
   background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 0px 8px 6px -6px black;
   height: 250px;
   width: 150px;
-  margin: 0.5em;
+  margin: 0.5em 1em;
   padding: 1em;
   text-align: center;
 }
@@ -44,21 +47,27 @@ html {
   color: #ff4d4d;
 }
 
+.Join-message {
+  margin-top: 0.5em;
+  color: #38f9d7;
+}
+
+.Join-message:hover {
+  color: #282222;
+  transition: 0.3s;
+}
+
 .Theme-element {
   color: #282222;
   line-height: 1.25em;
 }
 
-.link {
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.8;
+.Theme-tag {
+  margin-top: 0.25em;
 }
 
-.link:hover {
-  color: #a39393;
-  transition: 0.3s;
-  opacity: 1;
+.link {
+  text-decoration: none;
 }
 
 .organizer-div {

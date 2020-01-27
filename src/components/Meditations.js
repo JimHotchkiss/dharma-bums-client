@@ -9,18 +9,18 @@ const Meditations = props => {
         meditation.attributes.duration === 0 ? "Finished" : "Card-element"
       }
     >
-      <h4 className="Theme-element">
-        Theme:
-        <br />
-        <Link className="link" to={`/meditations/${meditation.id}`}>
-          {meditation.attributes.theme}
-        </Link>
-      </h4>
+      <h4 className="Theme-element">Meditation Theme:</h4>
+      <p className="Theme-tag">{meditation.attributes.theme}</p>
+
       {meditation.attributes.duration === 0 ? (
         <div className="Finished-div">
           <p className="Finished-message">Meditation Complete</p>
         </div>
-      ) : null}
+      ) : (
+        <Link className="link" to={`/meditations/${meditation.id}`}>
+          <p className="Join-message">Join The Meditation</p>
+        </Link>
+      )}
 
       <div className="organizer-div">
         <p>Organizer: {meditation.attributes.organizer}</p>

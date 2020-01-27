@@ -2,7 +2,8 @@ const manageMeditations = (
   state = {
     meditations: [],
     completed: false,
-    loading: false
+    loading: false,
+    duration: 0
   },
   action
 ) => {

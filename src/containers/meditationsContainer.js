@@ -11,6 +11,7 @@ class MeditationsContainer extends React.Component {
     this.props.fetchMeditations();
   }
   render() {
+    console.log(this.props);
     return (
       <div className="Meditation_background">
         <Switch>
@@ -30,6 +31,7 @@ class MeditationsContainer extends React.Component {
               <Meditation
                 {...routerProps}
                 meditations={this.props.meditations}
+                duration={this.props.duration}
               />
             )}
           />
@@ -44,7 +46,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  return { meditations: state.meditations };
+  return { meditations: state.meditations, duration: state.duration };
 }
 
 export default connect(
