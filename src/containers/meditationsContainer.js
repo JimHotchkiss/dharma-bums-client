@@ -5,6 +5,7 @@ import { fetchMeditations } from "../actions/fetchMeditations";
 import Meditations from "../components/Meditations";
 import { Route, Switch } from "react-router-dom";
 import Meditation from "../components/Meditation";
+import MeditationForm from "../components/MeditationForm";
 
 class MeditationsContainer extends React.Component {
   componentDidMount() {
@@ -14,6 +15,11 @@ class MeditationsContainer extends React.Component {
     return (
       <div className="Meditation_background">
         <Switch>
+          <Route
+            exact
+            path="/meditations/new"
+            render={routerProps => <MeditationForm {...routerProps} />}
+          />
           <Route
             exact
             path="/meditations"
