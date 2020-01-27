@@ -1,5 +1,5 @@
 import React from "react";
-import MeditationsContainer from "./containers/MeditationsContainer";
+import MeditationsContainer from "./containers/meditationsContainer";
 
 class App extends React.Component {
   render() {
