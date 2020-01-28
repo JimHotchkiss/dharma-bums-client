@@ -2,8 +2,7 @@ const manageMeditations = (
   state = {
     meditations: [],
     completed: false,
-    loading: false,
-    duration: 0
+    loading: false
   },
   action
 ) => {
@@ -21,13 +20,10 @@ const manageMeditations = (
         loading: false
       };
     case "ADD_MEDITATION":
-      console.log(action.payload, state);
       return {
         ...state,
-        meditations: [...state.meditations, action.payload],
-        loading: false
+        meditation: [...state.meditations, action.payload]
       };
-
     default:
       return state;
   }

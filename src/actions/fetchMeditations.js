@@ -1,5 +1,4 @@
 export const fetchMeditations = () => {
-  console.log("Inside fetch");
   return dispatch => {
     dispatch({ type: "LOADING_MEDITATIONS" });
     fetch("http://localhost:3000/api/v1/meditations")

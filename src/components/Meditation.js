@@ -7,7 +7,8 @@ const Meditation = props => {
   return (
     <div>
       {meditation ? meditation.attributes.duration : null}
-      <h3>{meditation ? meditation.attributes.theme : null}</h3>
+      <p>{meditation ? meditation.attributes.theme : null}</p>
+      <p>{meditation ? meditation.attributes.organizer : null}</p>
       <div>
         <Link to={`/meditations`}>Back to Meditations</Link>
       </div>
