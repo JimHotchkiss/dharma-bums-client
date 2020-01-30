@@ -1,3 +1,9 @@
 .Nav-color {
-  background-color: greenyellow;
+  /* background-color: #f0eeee; */
+  background-color: #6d99db;
+  position: fixed;
+  top: 0;
+  padding: 1em;
+  width: 100%;
+  opacity: 0.8;
 }
