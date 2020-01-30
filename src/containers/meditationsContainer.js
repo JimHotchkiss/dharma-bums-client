@@ -38,7 +38,6 @@ class MeditationsContainer extends React.Component {
               <Meditation
                 {...routerProps}
                 meditations={this.props.meditations}
-                duration={this.props.duration}
               />
             )}
           />
@@ -53,7 +52,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  return { meditations: state.meditations, duration: state.duration };
+  return { meditations: state.meditations };
 }
 
 export default connect(

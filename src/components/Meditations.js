@@ -3,33 +3,35 @@ import { Link } from "react-router-dom";
 
 const Meditations = props => {
   const meditationList = props.meditations.map(meditation => (
-    <div
-      key={meditation.id}
-      className={
-        meditation.attributes.duration === 0 ? "Finished" : "Card-element"
-      }
-    >
+    <div key={meditation.id} className="Card-element">
       <h4 className="Theme-element">Meditation Theme:</h4>
-      <p className="Theme-tag">{meditation.attributes.theme}</p>
-
-      {meditation.attributes.duration === 0 ? (
-        <div className="Finished-div">
-          <p className="Finished-message">Meditation Complete</p>
-        </div>
+      {meditation.attributes ? (
+        <p className="Theme-tag">{meditation.attributes.theme}</p>
       ) : (
-        <Link className="link" to={`/meditations/${meditation.id}`}>
-          <p className="Join-message">Join The Meditation</p>
-        </Link>
+        <p className="Theme-tag">{meditation.theme}</p>
       )}
 
+      <Link className="link" to={`/meditations/${meditation.id}`}>
+        <p className="Join-message">Join The Meditation</p>
+      </Link>
+
       <div className="organizer-div">
-        <p>Organizer: {meditation.attributes.organizer}</p>
+        {meditation.attributes ? (
+          <p>Organizer: {meditation.attributes.organizer}</p>
+        ) : (
+          <p>Organizer: {meditation.organizer}</p>
+        )}
       </div>
       <div className="duration-div">
-        <p>Duration: {meditation.attributes.duration}</p>
+        {meditation.attributes ? (
+          <p>Duration: {meditation.attributes.duration}</p>
+        ) : (
+          <p>Duration: {meditation.duration}</p>
+        )}
       </div>
     </div>
   ));
   return <div className="Container">{meditationList}</div>;
 };
+
 export default Meditations;

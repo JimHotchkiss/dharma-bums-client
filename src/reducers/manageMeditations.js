@@ -22,7 +22,7 @@ const manageMeditations = (
     case "ADD_MEDITATION":
       return {
         ...state,
-        meditation: [...state.meditations, action.payload]
+        meditations: [...state.meditations, action.payload]
       };
     default:
       return state;

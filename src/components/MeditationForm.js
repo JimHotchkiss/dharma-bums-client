@@ -29,6 +29,7 @@ class MeditationForm extends React.Component {
       organizer: "",
       duration: "20"
     });
+    this.props.history.push("/meditations");
   };
 
   render() {
@@ -36,7 +37,9 @@ class MeditationForm extends React.Component {
       <div>
         Meditation Form
         <div>
-          <Link to={`/meditations`}>Back to Meditations</Link>
+          <Link meditations={this.props.meditations} to={`/meditations`}>
+            Back to Meditations
+          </Link>
         </div>
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -56,8 +59,8 @@ class MeditationForm extends React.Component {
               onChange={this.handleDuration}
               name="duration"
             >
-              <option type="number" value="2">
-                2
+              <option type="number" value="0">
+                0
               </option>
               <option type="number" value="5">
                 5
@@ -113,5 +116,8 @@ class MeditationForm extends React.Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return { meditations: state.meditations };
+};
 
-export default connect(null, { addMeditation })(MeditationForm);
+export default connect(mapStateToProps, { addMeditation })(MeditationForm);
