@@ -35,83 +35,80 @@ class MeditationForm extends React.Component {
   render() {
     return (
       <div>
-        Meditation Form
-        <div>
-          <Link meditations={this.props.meditations} to={`/meditations`}>
-            Back to Meditations
-          </Link>
+        Create a Meditation Group
+        <div className="Form-wrapper">
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Theme:
+              <input
+                type="text"
+                name="theme"
+                placeholder="Theme"
+                value={this.state.theme}
+                onChange={this.handleTheme}
+              />
+            </label>
+            <label>
+              Duration:
+              <select
+                value={this.state.duration}
+                onChange={this.handleDuration}
+                name="duration"
+              >
+                <option type="number" value="0">
+                  0
+                </option>
+                <option type="number" value="5">
+                  5
+                </option>
+                <option type="number" value="10">
+                  10
+                </option>
+                <option type="number" value="15">
+                  15
+                </option>
+                <option type="number" value="20">
+                  20
+                </option>
+                <option type="number" value="25">
+                  25
+                </option>
+                <option type="number" value="30">
+                  30
+                </option>
+                <option type="number" value="35">
+                  35
+                </option>
+                <option type="number" value="40">
+                  40
+                </option>
+                <option type="number" value="45">
+                  45
+                </option>
+                <option type="number" value="50">
+                  50
+                </option>
+                <option type="number" value="55">
+                  55
+                </option>
+                <option type="number" value="60">
+                  60
+                </option>
+              </select>
+            </label>
+            <label>
+              Organizer:
+              <input
+                type="text"
+                name="organizer"
+                placeholder="Organizer"
+                value={this.state.organizer}
+                onChange={this.handleOrganizer}
+              />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
         </div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Theme:
-            <input
-              type="text"
-              name="theme"
-              placeholder="Theme"
-              value={this.state.theme}
-              onChange={this.handleTheme}
-            />
-          </label>
-          <label>
-            Duration:
-            <select
-              value={this.state.duration}
-              onChange={this.handleDuration}
-              name="duration"
-            >
-              <option type="number" value="0">
-                0
-              </option>
-              <option type="number" value="5">
-                5
-              </option>
-              <option type="number" value="10">
-                10
-              </option>
-              <option type="number" value="15">
-                15
-              </option>
-              <option type="number" value="20">
-                20
-              </option>
-              <option type="number" value="25">
-                25
-              </option>
-              <option type="number" value="30">
-                30
-              </option>
-              <option type="number" value="35">
-                35
-              </option>
-              <option type="number" value="40">
-                40
-              </option>
-              <option type="number" value="45">
-                45
-              </option>
-              <option type="number" value="50">
-                50
-              </option>
-              <option type="number" value="55">
-                55
-              </option>
-              <option type="number" value="60">
-                60
-              </option>
-            </select>
-          </label>
-          <label>
-            Organizer:
-            <input
-              type="text"
-              name="organizer"
-              placeholder="Organizer"
-              value={this.state.organizer}
-              onChange={this.handleOrganizer}
-            />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
       </div>
     );
   }
