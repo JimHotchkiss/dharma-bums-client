@@ -1,20 +1,8 @@
 .Nav-wrapper {
-  background-color: #f0eeee;
+  height: 4em;
   position: fixed;
-  display: flex;
-  justify-content: space-around;
-  top: 0;
-  padding: 1em;
   width: 100%;
-  opacity: 0.8;
-}
-
-.Links {
-  text-decoration: none;
-  color: black;
-}
-
-.Links:hover {
-  color: #4dffa6;
-  transition: 0.5s;
+  background-color: hotpink;
+  display: flex;
+  flex-direction: column;
 }
