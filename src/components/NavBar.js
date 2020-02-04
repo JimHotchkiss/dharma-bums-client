@@ -5,11 +5,16 @@ const NavBar = props => {
   debugger;
   return (
     <div className="Nav-wrapper">
-      <div className="Top-div">
-        <p className="Dharma-tag">Dharma Bums</p>
+      <div className="Meditation-link">
+        <Link className="Links" to={`/meditations/new`}>
+          Create Meditation
+        </Link>
       </div>
-      <div className="Bottom-div">
-        <p>Meditation App</p>
+
+      <div className="Meditations-link">
+        <Link className="Links" to={`/meditations`}>
+          Back to Meditations
+        </Link>
       </div>
     </div>
   );

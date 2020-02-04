@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import { fetchMeditations } from "../actions/fetchMeditations";
 import Meditations from "../components/Meditations";
 import { Route, Switch } from "react-router-dom";
+import NavBar from "../components/NavBar";
 import Meditation from "../components/Meditation";
 import MeditationForm from "../components/MeditationForm";
-import NavBar from "../components/NavBar";
 
 class MeditationsContainer extends React.Component {
   componentDidMount() {
@@ -14,37 +14,34 @@ class MeditationsContainer extends React.Component {
   }
   render() {
     return (
-      <div className="Meditation-container-wrapper">
+      <div className="Meditation_background">
         <NavBar meditations={this.props.meditations} />
-        <div className="Meditation_background">
-          <Switch>
-            <Route
-              exact
-              path="/meditations/new"
-              render={routerProps => <MeditationForm {...routerProps} />}
-            />
-
-            <Route
-              exact
-              path="/meditations"
-              render={routerProps => (
-                <Meditations
-                  {...routerProps}
-                  meditations={this.props.meditations}
-                />
-              )}
-            />
-            <Route
-              path="/meditations/:id"
-              render={routerProps => (
-                <Meditation
-                  {...routerProps}
-                  meditations={this.props.meditations}
-                />
-              )}
-            />
-          </Switch>
-        </div>
+        <Switch>
+          <Route
+            exact
+            path="/meditations/new"
+            render={routerProps => <MeditationForm {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/meditations"
+            render={routerProps => (
+              <Meditations
+                {...routerProps}
+                meditations={this.props.meditations}
+              />
+            )}
+          />
+          <Route
+            path="/meditations/:id"
+            render={routerProps => (
+              <Meditation
+                {...routerProps}
+                meditations={this.props.meditations}
+              />
+            )}
+          />
+        </Switch>
       </div>
     );
   }
