@@ -1,12 +1,10 @@
 .Nav-wrapper {
   height: 4em;
   position: fixed;
-<<<<<<< HEAD
   width: 100%;
   background-color: hotpink;
   display: flex;
   flex-direction: column;
-=======
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,5 +21,4 @@
 .Links:hover {
   color: #4dffa6;
   transition: 0.5s;
->>>>>>> master
 }
