@@ -9,9 +9,16 @@
   width: 100%;
 }
 
+.Meditation-link {
+  border-bottom: 1px solid grey;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.4em;
+}
+
 .Links {
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 
 .Links:hover {
