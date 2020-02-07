@@ -13,8 +13,8 @@ const NavBar = props => {
       </div>
 
       <div className="Meditations-link">
-        <Link className="Links" to={`/meditations`}>
-          <p>meditation app</p>
+        <Link className="Links" to={`/meditations/new`}>
+          <p>Create a mediation</p>
         </Link>
       </div>
     </div>
