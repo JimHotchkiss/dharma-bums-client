@@ -13,18 +13,38 @@
   justify-content: space-around;
 }
 
-.Square-one {
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+.Meditation-field {
   box-shadow: 0px 8px 6px -6px black;
-  width: 220px;
-  height: 150px;
-  background-color: aquamarine;
+  width: 45%;
+  height: 250px;
 }
 
-.Square-two {
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+.Theme-div {
+  text-align: center;
+}
+
+.Details-wrapper {
+  margin: 1em 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Dharma-talk-field {
+  text-align: center;
   box-shadow: 0px 8px 6px -6px black;
-  width: 220px;
-  height: 150px;
-  background-color: burlywood;
+  width: 45%;
+  height: 250px;
+}
+
+.Start-meditation {
+  background-color: #4facfe;
+  margin-left: 10%;
+  height: 40px;
+  width: 80%;
+  transition: 2s;
+  border-radius: 7px;
+}
+.Start-meditation:hover {
+  background-color: #00f2fe;
 }

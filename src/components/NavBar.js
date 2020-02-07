@@ -2,7 +2,6 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 const NavBar = props => {
-  debugger;
   return (
     <div className="Nav-wrapper">
       <div className="Meditation-link">
