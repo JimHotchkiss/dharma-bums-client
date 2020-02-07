@@ -1,5 +1,5 @@
 import React from "react";
-import "./Meditation.css";
+import "./Meditations.css";
 import { connect } from "react-redux";
 import { fetchMeditations } from "../actions/fetchMeditations";
 import Meditations from "../components/Meditations";
