@@ -1,10 +1,9 @@
 import React from "react";
 import "./Meditation.css";
+import DharmaTalks from "./DharmaTalk";
 
 const Meditation = props => {
   let meditation = props.meditations[props.match.params.id - 1];
-  console.log(meditation.attributes.theme);
-
   return (
     <div className="Meditation-wrapper">
       <div className="Card-wrapper">
@@ -24,10 +23,7 @@ const Meditation = props => {
             <button className="Start-meditation">Start Meditation</button>
           </div>
         </div>
-
-        <div className="Dharma-talk-field">
-          <h3>Dharma Talk</h3>
-        </div>
+        <DharmaTalks meditation={meditation} />
       </div>
     </div>
   );
