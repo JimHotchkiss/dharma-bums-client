@@ -5,7 +5,6 @@ body {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   box-shadow: 0px 8px 6px -6px black;
   margin: 8em 1em 1em;
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -13,17 +12,19 @@ body {
 }
 
 .Content-div {
+  margin: 0.5em;
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* aligns along y-axis*/
   justify-content: space-around;
   padding-left: 2em;
 }
+.Content-text {
+  padding-top: 5px;
+}
 
-.Timer-div {
-  padding-top: 2em;
+.Timer-wrapper {
   display: flex;
-  justify-content: center;
-  flex: 2;
+  flex: 3;
+  margin: 0 auto;
 }

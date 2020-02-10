@@ -11,7 +11,6 @@ const NavBar = props => {
           </h3>
         </Link>
       </div>
-
       <div className="Meditations-link">
         <Link className="Links" to={`/meditations/new`}>
           <p>Create a mediation</p>
