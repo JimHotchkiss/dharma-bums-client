@@ -1,7 +1,7 @@
 import React from "react";
 import "./Meditation.css";
 import TimerContainer from "../containers/TimerContainer";
-import DharmaTalk from "./DharmaTalk";
+// import DharmaTalk from "./DharmaTalk";
 
 const Meditation = props => {
   let meditation = props.meditations[props.match.params.id - 1];

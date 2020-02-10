@@ -1,6 +1,7 @@
 const manageMeditations = (
   state = {
     meditations: [],
+    meditationComplete: false,
     completed: false,
     loading: false
   },

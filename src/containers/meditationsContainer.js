@@ -28,6 +28,7 @@ class MeditationsContainer extends React.Component {
             render={routerProps => (
               <Meditations
                 {...routerProps}
+                completed={this.props.completed}
                 meditations={this.props.meditations}
               />
             )}
@@ -37,6 +38,7 @@ class MeditationsContainer extends React.Component {
             render={routerProps => (
               <Meditation
                 {...routerProps}
+                completed={this.props.completed}
                 meditations={this.props.meditations}
               />
             )}
