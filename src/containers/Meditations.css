@@ -38,11 +38,11 @@ html {
 
 .Join-message {
   margin-top: 0.5em;
-  color: #38f9d7;
+  color: #282222;
 }
 
 .Join-message:hover {
-  color: #282222;
+  color: #38f9d7;
   transition: 0.3s;
 }
 
