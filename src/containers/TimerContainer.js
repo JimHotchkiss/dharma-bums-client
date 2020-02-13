@@ -3,13 +3,17 @@ import "./TimerContainer.css";
 class TimerContainer extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
   render() {
+    console.log(this.props.meditation.duration);
     return (
       <div className="Timer-container">
         <div className="Timer-title">
-          <h3>Timer Container</h3>
+          <h2>Meditation Clock</h2>
+
+          <div className="Timer-div">
+            <p className="Timer-font">{this.props.meditation.duration}</p>
+          </div>
         </div>
         <div className="Button-wrapper">
           <div className="Start-div">

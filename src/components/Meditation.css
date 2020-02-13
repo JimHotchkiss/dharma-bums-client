@@ -9,6 +9,8 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   min-height: 300px;
+  width: 80%;
+  margin: auto;
 }
 
 .Content-div {
@@ -26,5 +28,6 @@ body {
 .Timer-wrapper {
   display: flex;
   flex: 3;
-  margin: 0 auto;
+  margin: auto;
+  width: 50%;
 }

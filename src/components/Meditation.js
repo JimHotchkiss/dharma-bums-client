@@ -23,7 +23,7 @@ const Meditation = props => {
       </div>
       <div className="Timer-wrapper">
         {/* <DharmaTalk /> */}
-        <TimerContainer meditation={props} />
+        <TimerContainer meditation={meditation.attributes} />
       </div>
     </div>
   );
