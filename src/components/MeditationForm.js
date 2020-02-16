@@ -54,9 +54,6 @@ class MeditationForm extends React.Component {
                 onChange={this.handleDuration}
                 name="duration"
               >
-                <option type="number" value="0">
-                  0
-                </option>
                 <option type="number" value="5">
                   5
                 </option>

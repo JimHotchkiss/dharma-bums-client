@@ -5,25 +5,34 @@ class TimerContainer extends React.Component {
   constructor(props) {
     super(props);
     const time = props.meditation.duration;
-    this.state = { meditationLength: time };
+    this.state = {
+      meditationLength: time,
+      meditationStop: false
+    };
   }
   render() {
     const audio = new Audio(meditationChime);
 
+    const hideButton = () => {
+      this.setState({ meditationStop: true });
+    };
+
     const handleStart = () => {
+      audio.currentTime = 0;
       audio.play();
+      hideButton();
       const interval = setInterval(() => {
         this.setState({ meditationLength: this.state.meditationLength - 1 });
         if (this.state.meditationLength === 0) {
           clearInterval(interval);
+          audio.currentTime = 0;
           audio.play();
         }
       }, 1000);
     };
-    let timer = this.state.meditationLength;
+    const timer = this.state.meditationLength;
     const complete = <p>Meditation Complete</p>;
 
-    const meditationComplete = <p>Mediation Complete</p>;
     return (
       <div className="Timer-container">
         <div className="Timer-title">
@@ -32,10 +41,13 @@ class TimerContainer extends React.Component {
         </div>
         <div className="Button-wrapper">
           <div className="Start-div">
-            <button onClick={handleStart} className="Start-button">
+            <button
+              style={{ display: this.state.meditationStop ? "none" : null }}
+              onClick={handleStart}
+              className="Start-button"
+            >
               <p>Begin</p>
             </button>
-            <audio className="Chime" src="../sounds/meditationBell.mp3"></audio>
           </div>
         </div>
       </div>
