@@ -17,8 +17,10 @@ const Meditation = props => {
           <p className="Content-text">{meditation.attributes.organizer}</p>
         </div>
         <div className="Duration-div">
-          <h3>Duration:</h3>{" "}
-          <p className="Content-text">{meditation.attributes.duration}</p>
+          <h3>Duration:</h3>
+          <p className="Content-text">
+            {meditation.attributes.duration} Minutes
+          </p>
         </div>
       </div>
       <div className="Timer-wrapper">

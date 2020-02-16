@@ -30,14 +30,16 @@ class TimerContainer extends React.Component {
         }
       }, 1000);
     };
-    const timer = this.state.meditationLength;
+    const timer = <p className="Timer-font">{this.state.meditationLength}</p>;
     const complete = <p>Meditation Complete</p>;
 
     return (
       <div className="Timer-container">
         <div className="Timer-title">
           <h2>Meditation Clock</h2>
-          <div className="Timer-div">{timer === 0 ? complete : timer}</div>
+          <div className="Timer-div">
+            {this.state.meditationLength === 0 ? complete : timer}
+          </div>
         </div>
         <div className="Button-wrapper">
           <div className="Start-div">

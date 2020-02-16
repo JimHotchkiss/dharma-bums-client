@@ -38,11 +38,11 @@ html {
 
 .Join-message {
   margin-top: 0.5em;
-  color: #282222;
+  color: #38f9d7;
 }
 
 .Join-message:hover {
-  color: #38f9d7;
+  color: #282222;
   transition: 0.3s;
 }
 
@@ -53,6 +53,10 @@ html {
 
 .Theme-tag {
   margin-top: 0.25em;
+}
+
+.link-div {
+  padding: 1em;
 }
 
 .link {

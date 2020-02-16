@@ -11,10 +11,6 @@ const Meditations = props => {
         <p className="Theme-tag">{meditation.theme}</p>
       )}
 
-      <Link className="link" to={`/meditations/${meditation.id}`}>
-        <p className="Join-message">Join The Meditation</p>
-      </Link>
-
       <div className="organizer-div">
         {meditation.attributes ? (
           <p>Organizer: {meditation.attributes.organizer}</p>
@@ -24,10 +20,15 @@ const Meditations = props => {
       </div>
       <div className="duration-div">
         {meditation.attributes ? (
-          <p>Duration: {meditation.attributes.duration}</p>
+          <p>Duration:{meditation.attributes.duration} Minutes</p>
         ) : (
           <p>Duration: {meditation.duration}</p>
         )}
+      </div>
+      <div className="link-div">
+        <Link className="link" to={`/meditations/${meditation.id}`}>
+          <p className="Join-message">Join The Meditation</p>
+        </Link>
       </div>
     </div>
   ));
